@@ -1,0 +1,26 @@
+# Virtualenv
+.venv
+
+# Dotenv
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Coverage, cache
+.coverage
+*.py,cover
+.cache/
+
+# Django media
+media/
+
+# sqlite
+db.sqlite3
+
+# IDE
+.idea/
+*.iml
+*.iws
