@@ -68,8 +68,12 @@ DATABASES = {
         'NAME': os.getenv('DATABASE_NAME'),
         'USER': os.getenv('DATABASE_USER'),
         'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-        'HOST': os.getenv('DATABASE_HOST'),
         'PORT': os.getenv('DATABASE_PORT'),
+
+        # УСТАНОВИТЕ ЗНАЧЕНИЕ localhost ВО ВРЕМЯ РАЗРАБОТКИ: 'HOST': 'localhost'
+        # SET UP VALUE localhost FOR DEVELOPMENT: 'HOST': 'localhost'
+        'HOST': os.getenv('DATABASE_HOST'),
+        # 'HOST': 'localhost'
     }
 
     #  sqlite3
@@ -103,6 +107,9 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = '/app/staticfiles/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/app/mediafiles/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
